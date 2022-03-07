@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccountsActivity"
+    android:background="@drawable/profile_bg_color">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:theme="@style/Theme.Charawidhi.AppBarOverlay"
+        android:fitsSystemWindows="true">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        app:layout_anchor="@+id/toolbar"
+        app:layout_anchorGravity="center"
+        app:layout_collapseMode="pin">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_farmer"
+            android:alpha="0.6"
+            android:scaleType="centerCrop"
+            app:civ_border_color="#FFFFFF"
+            app:civ_border_width="2dp"
+            app:layout_collapseMode="parallax" />
+
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="260dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="300dp"
+            android:text=".@rohitkumar"
+            android:textAlignment="viewStart"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            />
+
+
+    </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="70dp"
+        android:background="@drawable/profile_layout"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/accountInfo"
+                android:layout_width="260dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="28dp"
+                android:text="Account Info"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.225"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/about"
+                android:layout_width="325dp"
+                android:layout_height="101dp"
+                android:layout_marginTop="44dp"
+                android:background="@drawable/square"
+                android:hint="About Your Self"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.395"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/accountInfo" />
+
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="88dp"
+                android:layout_height="41dp"
+                android:layout_marginTop="12dp"
+                android:text="Name"
+                android:textAlignment="viewStart"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.232"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/about" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="59dp"
+                android:layout_height="49dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toStartOf="@+id/name"
+                app:layout_constraintHorizontal_bias="0.888"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/about"
+                android:tint="@color/black"
+                app:srcCompat="@drawable/ic_baseline_perm_identity_24" />
+
+            <TextView
+                android:id="@+id/interName"
+                android:layout_width="260dp"
+                android:layout_height="40dp"
+                android:text="Rohit Kumar"
+                android:layout_marginTop="-9dp"
+                android:textAlignment="viewStart"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name" />
+
+
+            <TextView
+                android:id="@+id/interEmail"
+                android:layout_width="88dp"
+                android:layout_height="41dp"
+                android:layout_marginTop="12dp"
+                android:text="Email"
+                android:textAlignment="viewStart"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.232"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/interName" />
+
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="260dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="-13dp"
+                android:textAlignment="viewStart"
+                android:text="Rohitkumar@gmail.com"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/interEmail" />
+
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="59dp"
+                android:layout_height="49dp"
+                android:layout_marginTop="28dp"
+                app:layout_constraintEnd_toStartOf="@+id/name"
+                app:layout_constraintHorizontal_bias="0.888"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView6"
+                android:tint="@color/black"
+                app:srcCompat="@drawable/ic_baseline_email_24" />
+
+            <TextView
+                android:id="@+id/interMobile"
+                android:layout_width="88dp"
+                android:layout_height="41dp"
+                android:layout_marginTop="12dp"
+                android:text="Mobile"
+                android:textAlignment="viewStart"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.232"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/email" />
+
+
+            <TextView
+                android:id="@+id/mobile"
+                android:layout_width="260dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="-12dp"
+                android:textAlignment="viewStart"
+                android:text="123456789"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/interMobile" />
+
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="59dp"
+                android:layout_height="49dp"
+                android:layout_marginTop="28dp"
+
+                android:tint="@color/black"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@+id/interMobile"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView8"
+                app:srcCompat="@drawable/ic_baseline_call_24" />
+
+            <TextView
+                android:id="@+id/interDOB"
+                android:layout_width="88dp"
+                android:layout_height="41dp"
+                android:layout_marginTop="12dp"
+                android:text="D.O.B"
+                android:textAlignment="viewStart"
+                android:textSize="24sp"
+
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.232"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mobile" />
+
+
+            <TextView
+                android:id="@+id/dob"
+                android:layout_width="260dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="-13dp"
+                android:textAlignment="viewStart"
+                android:text="xx-xx-xxxx"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/interDOB" />
+
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="59dp"
+                android:layout_height="49dp"
+                android:layout_marginTop="44dp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@+id/interMobile"
+                app:layout_constraintHorizontal_bias="0.888"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView9"
+                app:srcCompat="@drawable/ic_baseline_calendar_month_24" />
+
+            <TextView
+                android:id="@+id/interAddress"
+                android:layout_width="88dp"
+                android:layout_height="41dp"
+                android:layout_marginTop="12dp"
+                android:text="Address"
+                android:textAlignment="viewStart"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.232"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dob" />
+
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="260dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="-13dp"
+                android:textAlignment="viewStart"
+                android:text="Entered address"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/interAddress" />
+
+
+            <ImageView
+                android:layout_width="59dp"
+                android:layout_height="49dp"
+                android:layout_marginTop="28dp"
+                app:layout_constraintEnd_toStartOf="@+id/interMobile"
+                app:layout_constraintHorizontal_bias="0.888"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView10"
+                android:tint="@color/black"
+                app:srcCompat="@drawable/ic_loaction" />
+
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/address"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="411dp"
+                android:layout_height="291dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tab_layout_1" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+

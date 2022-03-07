@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#3C415E"
+    android:background="@drawable/profile_bg_color"
+    tools:context=".Fragments.MoreFragment"
+    android:theme="@style/Theme.Charawidhi.PopupOverlay"
+    >
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.Charawidhi.AppBarOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="?colorPrimary"
+            android:theme="@style/Theme.Charawidhi.PopupOverlay">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="0.1dp"
+                android:background="@drawable/charavidhi_logo"
+                android:scaleType="centerCrop" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="More Features"
+                android:textColor="@color/white"
+                android:layout_marginStart="30dp"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/breedDectection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="55dp"
+        android:drawableStart="@drawable/bottom_search"
+        android:drawablePadding="6dp"
+        android:text="Dectection Of Breed"
+        android:textColor="@color/white"
+        app:drawableTint="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar" />
+
+    <TextView
+        android:id="@+id/veterinary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="24dp"
+        android:drawableStart="@drawable/bottom_vet"
+        android:drawablePadding="6dp"
+        android:text="Veterinary Services"
+        android:textColor="@color/white"
+        app:drawableTint="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/breedDectection" />
+
+    <TextView
+        android:id="@+id/aboutus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:drawableStart="@drawable/bottom_aboutus"
+        android:drawablePadding="6dp"
+        android:text="About us"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        app:drawableTint="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/veterinary"
+        app:layout_constraintTop_toBottomOf="@+id/veterinary" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

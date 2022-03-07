@@ -1,0 +1,91 @@
+<resources>
+    <string name="app_name">Charavidhi</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!--Cattle categories general -->
+    <string name="ox_brahma">All Bos indicus cattle including the Brahman are characterized by a large hump over the top of the shoulder and neck.
+        Brahmans vary in colour from very light grey or red to almost black. A majority of the breed are light to medium grey.
+        They are unusually thrifty, hardy and adaptable to a wide range of feed and climate.</string>
+
+    <string name="ox_ongole">Ongole cattle is an indigenous cattle breed that originates from Prakasam District in the state of Andhra Pradesh in India.
+        Ongole cattle are known for their toughness, rapid growth rate, and natural tolerance to tropical heat and disease resistance.
+        It was the first Indian breed of cattle to gain worldwide recognition</string>
+
+    <string name="cow_tharparkar">Tarparkar/White Sindhi Thari are medium-sized animals with a long tapering face, slightly convex forehead,
+        medium-sized horns that curve upward and outward, and large, semi-pendulous ears.
+        They are generally light-grey, with the colour deepening on the fore and hindquarters in males.</string>
+
+    <string name="cow_gir">Gir Cattle Characteristics. Gir cattle are distinctive in appearance and a heavy breed.
+        Their body is well proportioned and the udder in cows is well developed and round.
+        Their body color is shining red to spotted white and have long ears.</string>
+
+    <string name="cow_sahiwal">They are generally docile and lethargic, making them more useful for slow work.
+        The Sahiwal is the heaviest milker of all Zebu breeds and displays a well-developed udder.
+        Sahiwals demonstrate the ability to sire small, fast-growing calves and are noted for their
+        hardiness under unfavorable climatic conditions.</string>
+
+    <string name="cow_rathi">Rathi is a breed of cattle indigenous to India.
+        It originated in the region of the state of Rajasthan consisting of Bikaner, Ganganagar and Hanumangarh districts.
+        It is an important dual purpose cattle breed of India known for both its milking and draught prowess.
+        The cattle is locally known to have two variants, Rathi is a draft breed while Rathi is a pure milch variant.
+        The Rathi variant originated in the Alwar district of Rajasthan and was domesticated by Rathi tribe.
+        Rathi is characterized by its white skin with black or gray spots, while Rathi is usually of brown colour.
+        On average the cows can produce about 1560 kg of milk per lactation.</string>
+
+    <string name="cow_hf">Holstein Friesian cow originated from the Friesland area of Holland.
+        Now this cow breed is available all over the world. The characteristics of the Holstein Friesian cow are listed below. They are very big sized.
+        They have no hunchback. The color of their body generally become mixed with black and white. The Head is very long and comparatively narrow.
+        Adult ox weights about 900-1020 kg and cow 680-770 kg. The body of holstein friesian cow become very nourished. Their backside becomes very heavy.
+        Backside legs are straight. Cow produce calf for the first time at the age of 2.5 years. Produce calf every year.
+        Cow produce about 40 Ltrs milk daily and 4500-9000 Ltrs annually.
+        The calf weights about 30-40 kg when they born. Milk of holstein friesian contain 3.5 % fat.</string>
+
+    <string name="cow_sindhi">RED SINDHI. Red Sindhi is a reputed heat tolerant milch cattle breed originating from Sindh province of Pakistan.
+        The breed is also known as “Malir”, “Red Karachi” and “Sindhi”. …
+        The Red Sindhi breed has a very high genetic potential for milk production
+        and comparable with Sahiwal.</string>
+
+    <string name="cow_jersy" formatted="false">The Jersey cow ranges from 400 to 500 kilograms (880 to 1,100 lb). Factors contributing to the popularity of the breed have been their greater economy of production, due to:
+        -The ability to carry a larger number of effective milking cows per unit area due to lower body weight,
+        hence lower maintenance requirements, and superior grazing ability -Calving ease and a relatively lower rate of dystocia, leading to their popularity in crossbreeding with other dairy and even beef breeds to reduce calving-related injuries. -
+        High fertility -High butterfat (4.84%) and protein (3.95%), and the ability to thrive on locally produced feed</string>
+
+    <string name="cow_vechur" formatted="false">The Vechur cow is a rare breed of Bos indicus cattle named after the village Vechoor in Vaikom Taluk, Kottayam district of the state of Kerala in India.
+        The breed averages about 90 cm in height and weighs around 130 kg, yielding up to 3 liters of milk a day.
+        The medicinal property of the Vechur cows milk have been documented traditionally by Ayurveda and recent scientific studies have substantiated this.</string>
+
+
+    <!-- DESCRIPTION OF EACH CATEGORIES CATTLE  -->
+    <string name="cow_female_y_description">This is %1$s of %2$d Year of  age is available in %3$s.
+        The price of the cattle is Rs. %4$d/-.
+        The Cow is in %5$s lactation. It Produces %6$d Litres of milk on daily basis.Can call to Enquire more.</string>
+
+    <string name="cow_female_n_description">This is %1$s of %2$d Year of  age is available in %3$s.
+        The price of the cattle is Rs.  %4$d/-. It is not Pregnant Now . It Produces %5$d Litres of milk on daily basis
+        Can call to Enquire more.</string>
+
+    <string name="cow_male_description">This is %1$s of %2$d Year of  age is available in %3$s.
+        The price of the cattle is Rs. %4$d/-.Its Male gender
+        Can call to Enquire more.
+    </string>
+
+
+    <!-- Our Categories-->
+
+    <string name="cow">Gir | HF | Sahiwal | Jersey | Kankrej | Tharparkar | Rathi | Sindhi | Deoni | ONGOLE | Kasargod Kullan | Vechur | Vilwadri | Odisha Desi | Mewati | Kapila | Cheruvally | Brahma | Ongole |</string>
+    <string name="buffalo">Surti | Jafarabadi | Nili | Murrah | Banni | </string>
+    <string name="goat">Kota | Boer | Beetal | Sirohi | Sojat | Jamunapari | Barbari | Malabari | Gujri | Jakhrana | Sannen | </string>
+    <string name="sheep">Gaddi | Bannur | Neelore Jodipi | Deccani Sheep | Sindhanoor Sheep | NARI Suwarna | Coimbatore |</string>
+    <string name="title_activity_about">AboutActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+</resources>
+
