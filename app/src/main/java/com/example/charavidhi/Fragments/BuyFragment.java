@@ -21,9 +21,11 @@ import android.widget.Toast;
 
 import com.example.charavidhi.AccountsActivity;
 import com.example.charavidhi.Adapters.CattlesBuyAdapter;
+import com.example.charavidhi.Adapters.FrontAnimalAdapter;
 import com.example.charavidhi.Adapters.SliderAdapter;
 import com.example.charavidhi.CattleDetails;
 import com.example.charavidhi.Constant.AllConstant;
+import com.example.charavidhi.Models.CattleNameBreed;
 import com.example.charavidhi.Models.CattlesModel;
 import com.example.charavidhi.R;
 import com.example.charavidhi.databinding.FragmentBuyBinding;
@@ -37,6 +39,7 @@ public class BuyFragment extends Fragment implements CattlesBuyAdapter.CattlesCl
 
     private FragmentBuyBinding binding;
     private List<CattlesModel> cattlesModelList;
+    private List<CattleNameBreed> frontAnimalList;
 
     int[] images = {R.drawable.buyorsellone,
             R.drawable.hostelfacilitestwo,
@@ -52,6 +55,7 @@ public class BuyFragment extends Fragment implements CattlesBuyAdapter.CattlesCl
 
 
         cattlesModelList= AllConstant.cattleslist;
+        frontAnimalList =AllConstant.animals;
         return binding.getRoot();
     }
 
@@ -75,6 +79,11 @@ public class BuyFragment extends Fragment implements CattlesBuyAdapter.CattlesCl
         binding.imageSlider.setIndicatorAnimation(IndicatorAnimationType.WORM);
         binding.imageSlider.setSliderTransformAnimation(SliderAnimations.DEPTHTRANSFORMATION);
         binding.imageSlider.startAutoCycle();
+
+        FrontAnimalAdapter frontAnimalAdapter =new FrontAnimalAdapter(frontAnimalList);
+        binding.recyclerViewFrontPage.setAdapter(frontAnimalAdapter);
+        LinearLayoutManager frontLayoutManager=new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false);
+        binding.recyclerViewFrontPage.setLayoutManager(frontLayoutManager);
     }
 
 

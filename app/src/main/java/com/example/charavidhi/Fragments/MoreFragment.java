@@ -20,9 +20,8 @@ import android.widget.Toast;
 
 import com.example.charavidhi.AboutActivity;
 import com.example.charavidhi.AccountsActivity;
-import com.example.charavidhi.BreedDetectionActivity;
 import com.example.charavidhi.R;
-import com.example.charavidhi.databinding.FragmentBuyBinding;
+import com.example.charavidhi.TransportActivity;
 import com.example.charavidhi.databinding.FragmentMoreBinding;
 
 public class MoreFragment extends Fragment {
@@ -58,6 +57,12 @@ public class MoreFragment extends Fragment {
                 Toast.makeText(getContext(),"Coming Soon",Toast.LENGTH_SHORT).show();
             }
         });
+        binding.nearbyDairy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getContext(),"Coming Soon",Toast.LENGTH_SHORT).show();
+            }
+        });
 
         binding.aboutus.setOnClickListener((new View.OnClickListener() {
             @Override
@@ -69,10 +74,10 @@ public class MoreFragment extends Fragment {
             }
         }));
 
-        binding.breedDectection.setOnClickListener(new View.OnClickListener() {
+        binding.getTransport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent settingsIntent = new Intent(getContext(), BreedDetectionActivity.class);
+                Intent settingsIntent = new Intent(getContext(), TransportActivity.class);
                 startActivity(settingsIntent);
             }
         });

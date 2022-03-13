@@ -87,5 +87,68 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+
+    <!-- String with asterik-->
+    <string name="Choose_age">
+        <font color="#FF000000">Age</font>
+        <font color="#DC0B0B">*</font>
+    </string>
+    <string name="Choose_Gender">
+        <font color="#FF000000">Gender</font>
+        <font color="#DC0B0B">*</font>
+    </string>
+    <string name="SellerName">
+       <font color="#FF000000">Your Full Name</font>
+        <font color="#DC0B0B">*</font>
+    </string>
+    <string name="SellerMobile">
+       <font color="#FF000000">Mobile No.</font>
+        <font color="#DC0B0B">*</font>
+    </string>
+    <string name="SellerPrice">
+       <font color="#FF000000">Enter Price</font>
+        <font color="#DC0B0B">*</font>
+    </string>
+    <string name="SellerPlace">
+       <font color="#FF000000">Enter Place</font>
+        <font color="#DC0B0B">*</font>
+    </string>
+    <string name="UploadAnimal">
+        <font color="#FF000000">Upload your Cattle Photos</font>
+        <font color="#DC0B0B">*</font>
+    </string>
+    <string name="Choose_Lactation">
+        <font color="#FF000000">Lactation(Biyat)</font>
+        <font color="#DC0B0B">*</font>
+    </string>
+    <string name="Choose_Milk">
+        <font color="#FF000000">Milk Amount (in Litres)</font>
+        <font color="#DC0B0B">*</font>
+    </string>
+    <string name="Choose_weight">
+        <font color="#8A000000">Weight (in KG)</font>
+        <font color="#DC0B0B">*</font>
+    </string>
+    <string name="SellMsg">
+        <font color="#3a6b34">•</font>
+        <font color="FF000000"> Buy and Sell Your Cattle Online </font>
+        <font color="#3a6b34">•</font>
+    </string>
+
+    <string name="BreedMsg">
+        <font color="#3a6b34">•</font>
+        <font color="FF000000"> Find your cattle breed now just on a photo click</font>
+        <font color="#3a6b34">•</font>
+    </string>
+
+    <string name="aboutbreedDectection">With
+        <font color="#3a6b34">Charavidhi Breed Dectection Software, </font>
+        \n Now its very easy to know correct breed of your cattle. \n
+        If you are confused about your owns \n \n No worries,
+        Just upload image of your cattle and Press •Detect Breed• Button there ,you will get the correct breed
+    </string>
+
+
 </resources>
 

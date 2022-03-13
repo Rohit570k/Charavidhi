@@ -11,11 +11,11 @@ import android.widget.Toast;
 
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
+import com.example.charavidhi.Fragments.BreedDectectionFragments;
 import com.example.charavidhi.Fragments.BuyFragment;
 import com.example.charavidhi.Fragments.HostelFragment;
 import com.example.charavidhi.Fragments.MoreFragment;
 import com.example.charavidhi.Fragments.SellFragment;
-import com.example.charavidhi.Fragments.TransportFragments;
 
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
        // getWindow().setSoftInputMode(WindowManager.LayoutParams.S);
         bnv_Main=findViewById(R.id.bnv_main);
-        bnv_Main.add(new MeowBottomNavigation.Model(1,R.drawable.bottom_transport));
+        bnv_Main.add(new MeowBottomNavigation.Model(1,R.drawable.bottom_search));
         bnv_Main.add(new MeowBottomNavigation.Model(2,R.drawable.bottom_sellwritten));
         bnv_Main.add(new MeowBottomNavigation.Model(3,R.drawable.bottom_cow));
         bnv_Main.add(new MeowBottomNavigation.Model(4,R.drawable.bottom_hostel));
@@ -59,9 +59,9 @@ public class MainActivity extends AppCompatActivity {
             public Unit invoke(MeowBottomNavigation.Model model) {
                 switch (model.getId()) {
                     case 1:
-                        replace(new TransportFragments());
+                        replace(new BreedDectectionFragments());
                         Toast.makeText(getApplicationContext()
-                                , "Transport Section"
+                                , "Breed Detection "
                                 , Toast.LENGTH_SHORT).show();
                         break;
 

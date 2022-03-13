@@ -5,7 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#3C415E"
     android:background="@drawable/profile_bg_color"
     tools:context=".Fragments.MoreFragment"
     android:theme="@style/Theme.Charawidhi.PopupOverlay"
@@ -49,17 +48,17 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <TextView
-        android:id="@+id/breedDectection"
+        android:id="@+id/getTransport"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="55dp"
         android:layout_marginTop="55dp"
-        android:drawableStart="@drawable/bottom_search"
+        android:drawableStart="@drawable/bottom_transport"
         android:drawablePadding="6dp"
-        android:text="Dectection Of Breed"
+        android:text="Get Transportation Service"
         android:textColor="@color/white"
-        app:drawableTint="@color/white"
         android:textSize="20sp"
+        app:drawableTint="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/app_bar" />
 
@@ -76,7 +75,24 @@
         app:drawableTint="@color/white"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/breedDectection" />
+        app:layout_constraintTop_toBottomOf="@+id/getTransport" />
+
+    <TextView
+        android:id="@+id/nearbyDairy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="24dp"
+        android:drawableStart="@drawable/ic_loaction"
+
+        android:drawablePadding="6dp"
+        android:text="Find nearby dairy"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:drawableTint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/veterinary" />
+
 
     <TextView
         android:id="@+id/aboutus"
@@ -89,8 +105,8 @@
         android:textSize="20sp"
         android:textColor="#FFFFFF"
         app:drawableTint="@color/white"
-        app:layout_constraintStart_toStartOf="@+id/veterinary"
-        app:layout_constraintTop_toBottomOf="@+id/veterinary" />
+        app:layout_constraintStart_toStartOf="@+id/nearbyDairy"
+        app:layout_constraintTop_toBottomOf="@+id/nearbyDairy" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

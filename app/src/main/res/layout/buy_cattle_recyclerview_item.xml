@@ -10,6 +10,7 @@
     android:layout_gravity="center"
     app:cardElevation="8dp"
     android:layout_margin="10dp"
+    app:cardBackgroundColor="#EDFFFFFF"
     android:layout_marginBottom="40dp"
 
     >
@@ -55,7 +56,7 @@
                 android:layout_gravity="center_vertical"
                 android:gravity="center"
                 android:text="Rs. 50000"
-                android:textColor="#33354E"
+                android:textColor="@color/primary_500"
                 android:textSize="20sp" />
 
         </LinearLayout>

@@ -58,17 +58,30 @@
         android:background="#3CAAAAAA"
         >
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewFrontPage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
         <androidx.cardview.widget.CardView
             android:id="@+id/sliderCardView"
             android:layout_width="0dp"
-            android:layout_height="230dp"
+            android:layout_height="220dp"
             android:elevation="10dp"
             app:cardCornerRadius="6dp"
             android:layout_margin="9dp"
             app:layout_constraintBottom_toTopOf="@+id/recyclerView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@id/recyclerViewFrontPage"
+            >
 
             <com.smarteist.autoimageslider.SliderView
                 android:id="@+id/imageSlider"
@@ -83,7 +96,7 @@
                 app:sliderIndicatorOrientation="horizontal"
                 app:sliderIndicatorPadding="3dp"
                 app:sliderIndicatorRadius="2dp"
-                app:sliderIndicatorSelectedColor="@color/purple_500"
+                app:sliderIndicatorSelectedColor="@color/primary_500"
                 app:sliderIndicatorUnselectedColor="#FFF"
                 app:sliderScrollTimeInSec="2"
                 app:sliderStartAutoCycle="true" />
@@ -224,7 +237,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="@color/purple_500"
+            android:background="@color/prim"
             android:alpha="0.8"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"

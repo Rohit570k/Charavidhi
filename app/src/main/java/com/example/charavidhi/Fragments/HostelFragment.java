@@ -15,12 +15,15 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.charavidhi.R;
+import com.google.android.material.snackbar.Snackbar;
 
+import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class HostelFragment extends Fragment {
+public class
+HostelFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -37,10 +40,43 @@ public class HostelFragment extends Fragment {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               openWhatsApp("Hello Charavidhi \nI am interested in your Cattle hostel facility " +
-                       "\nI want more detail about that");
+                boolean installed=isInstalled("com.whatsapp");
+                if(installed){
+                     whatsapp("Hello Charavidhi \nI am interested in your Cattle hostel facility " +
+                             "\nI want more detail about that");
+                }else {
+                    Snackbar.make(view, "Whatsapp Not Installed", Snackbar.LENGTH_SHORT)
+                            .setAction("Action", null).show();
+                }
+//               openWhatsApp("Hello Charavidhi \nI am interested in your Cattle hostel facility " +
+//                       "\nI want more detail about that");
             }
         });
+    }
+
+    private void whatsapp(String msg) {
+        Intent i =new Intent(Intent.ACTION_VIEW);
+        try {
+            i.setData(Uri.parse("https://api.whatsapp.com/send?phone="+"+91 8285134971" +"&text=" + URLEncoder.encode(msg, "UTF-8")));
+            startActivity(i);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private boolean isInstalled(String s) {
+        PackageManager pm=getActivity().getPackageManager();
+        boolean is_installed;
+        try {
+            pm.getPackageInfo(s,PackageManager.GET_ACTIVITIES);
+            is_installed=true;
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+            is_installed=false;
+        }
+        return is_installed;
+
     }
 
     private void openWhatsApp(String mensaje){
@@ -54,7 +90,8 @@ public class HostelFragment extends Fragment {
             if (i.resolveActivity(packageManager) != null) {
                 startActivity(i);
             }else {
-//             KToast.errorToast(getActivity(), getString(R.string.no_whatsapp), Gravity.BOTTOM, KToast.LENGTH_SHORT);
+                Snackbar.make(getView(), "Whatsapps Not Installed", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show();
             }
         } catch(Exception e) {
             Log.e("ERROR WHATSAPP",e.toString());

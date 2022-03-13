@@ -19,7 +19,9 @@ public class CattleDetails extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         CattlesModel cattlesModel=getIntent().getParcelableExtra("CattlesModel");
-
+        getSupportActionBar().setTitle(cattlesModel.getNameBreed());
+        getSupportActionBar().setSubtitle(cattlesModel.getSeller());
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         binding.cattleImageDetails.setImageResource(cattlesModel.getImage());
         binding.cattleNameDetails.setText(cattlesModel.getNameBreed());
         binding.cattlePriceDetails.setText("Rs: " +cattlesModel.getPrice());
@@ -106,5 +108,11 @@ public class CattleDetails extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 }

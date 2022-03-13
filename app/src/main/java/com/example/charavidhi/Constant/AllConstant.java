@@ -1,5 +1,8 @@
 package com.example.charavidhi.Constant;
 
+import android.widget.ArrayAdapter;
+
+import com.example.charavidhi.Models.CattleNameBreed;
 import com.example.charavidhi.Models.CattlesModel;
 import com.example.charavidhi.R;
 
@@ -33,4 +36,58 @@ public interface AllConstant {
 
             )
     );
+
+
+    List<CattleNameBreed> animals =new ArrayList<>(
+            Arrays.asList(
+                    new CattleNameBreed(R.drawable.cattlecow,"Cow"),
+                    new CattleNameBreed(R.drawable.cattlebuffalo,"Buffalo"),
+                    new CattleNameBreed(R.drawable.ox_brahma,"Ox"),
+                    new CattleNameBreed(R.drawable.goat_boer,"Goat"),
+                    new CattleNameBreed(R.drawable.cattlesheep,"Sheep"),
+                    new CattleNameBreed(R.drawable.cattlehorse,"Horse")
+
+            )
+    );
+
+    List<CattleNameBreed> cow_breed =new ArrayList<>(
+            Arrays.asList(
+                    new CattleNameBreed(R.drawable.cow_gir,"Gir "),
+                    new CattleNameBreed(R.drawable.cow_hf,"Hf "),
+                    new CattleNameBreed(R.drawable.cow_rathi,"Rathi Breed "),
+                    new CattleNameBreed(R.drawable.cow_sindhi,"Sindhi Breed "),
+                    new CattleNameBreed(R.drawable.cow_jersey,"Jersey Breed "),
+                    new CattleNameBreed(R.drawable.cow_sahiwal,"Sahiwal Breed "),
+                    new CattleNameBreed(R.drawable.cow_vechur,"Vechur Breed "),
+                    new CattleNameBreed(R.drawable.cow_tharparkar,"Tharparkar ")
+            )
+    );
+
+    List<CattleNameBreed> ox_breed =new ArrayList<>(
+            Arrays.asList(
+                    new CattleNameBreed(R.drawable.ox_brahma,"Brahma "),
+                    new CattleNameBreed(R.drawable.ox_ongole,"Ongole ")
+            )
+    );
+
+    List<CattleNameBreed> goat_breed =new ArrayList<>(
+            Arrays.asList(
+                    new CattleNameBreed(R.drawable.goat_boer,"Boer "),
+                    new CattleNameBreed(R.drawable.goat_kota,"Kota "),
+                    new CattleNameBreed(R.drawable.goat_beetal,"Beetal Breed "),
+                    new CattleNameBreed(R.drawable.goat_sirohi,"Sirohi Breed ")
+            )
+    );
+
+
+    List<CattleNameBreed> buffalo_breed =new ArrayList<>(
+            Arrays.asList(
+                    new CattleNameBreed(R.drawable.buffalo_banni,"Baani  "),
+                    new CattleNameBreed(R.drawable.buffalo_jafarabadi,"Jafarabadi "),
+                    new CattleNameBreed(R.drawable.buffalo_mehsani,"Mehsani Breed "),
+                    new CattleNameBreed(R.drawable.buffalo_surti,"Surti Breed "),
+                    new CattleNameBreed(R.drawable.buffalo_murrah,"Murrah Breed ")
+            )
+    );
+
 }

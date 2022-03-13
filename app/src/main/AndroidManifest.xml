@@ -8,24 +8,24 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:largeHeap="true"
-        android:hardwareAccelerated="false"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Charawidhi"
-
-        >
-
-
-        <activity android:name="com.example.charavidhi.BreedDetectionActivity"
+        android:theme="@style/Theme.Charawidhi">
+        <activity android:name=".TransportActivity"
             android:theme="@style/Theme.Charawidhi.NoActionBar">
 
         </activity>
 
+        <activity android:name=".SellingDetails"
+            android:label="Fill Details of your Cattle">
 
-        <activity android:name="com.example.charavidhi.AboutActivity"
+        </activity>
+        <activity
+            android:name=".AboutActivity"
             android:label="@string/title_activity_about"
             android:theme="@style/Theme.Charawidhi.NoActionBar">
             <intent-filter>
@@ -36,9 +36,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
-
-        <activity android:name="com.example.charavidhi.SplashActivity"
+        <activity
+            android:name=".SplashActivity"
             android:theme="@style/Theme.Charawidhi.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -46,18 +45,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
-        <activity android:name="com.example.charavidhi.AccountsActivity"
-            android:theme="@style/Theme.Charawidhi.NoActionBar" />
-        <activity android:name="com.example.charavidhi.CattleDetails" />
-
-
         <activity
-            android:name="com.example.charavidhi.MainActivity"
-            android:theme="@style/Theme.Charawidhi.NoActionBar"
-            >
-
+            android:name=".AccountsActivity"
+            android:theme="@style/Theme.Charawidhi.NoActionBar" />
+        <activity android:name=".CattleDetails" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.Charawidhi.NoActionBar">
         </activity>
 
         <meta-data

@@ -20,6 +20,7 @@ public class AboutActivity extends AppCompatActivity {
         setContentView(R.layout.activity_about);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         FloatingActionButton fab = findViewById(R.id.aboutusemailfab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -40,5 +41,12 @@ public class AboutActivity extends AppCompatActivity {
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         }
+    }
+
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 }

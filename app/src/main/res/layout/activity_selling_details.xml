@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SellingDetails">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <TextView
+        android:id="@+id/textViewDivider1"
+        style="@style/TextViewTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#51787171"
+        android:paddingStart="16dp"
+        android:text="Animal Details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView31"
+        style="@style/TextViewSubTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/Choose_Gender"
+        app:layout_constraintEnd_toStartOf="@+id/textView32"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDivider1" />
+
+    <TextView
+        android:id="@+id/textView32"
+        style="@style/TextViewSubTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/Choose_age"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView31"
+        app:layout_constraintTop_toTopOf="@+id/textView31" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="8dp"
+        android:hint="Choose Gender"
+        app:layout_constraintEnd_toEndOf="@+id/textView31"
+        app:layout_constraintStart_toStartOf="@+id/textView31"
+        app:layout_constraintTop_toBottomOf="@+id/textView31">
+
+        <AutoCompleteTextView
+            android:id="@+id/cattleGenderEdt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:hint="Choose Age"
+        app:layout_constraintEnd_toEndOf="@+id/textView32"
+        app:layout_constraintStart_toStartOf="@+id/textView32"
+        app:layout_constraintTop_toBottomOf="@+id/textView32">
+
+        <AutoCompleteTextView
+            android:id="@+id/cattleAgeEdt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView33"
+        style="@style/TextViewSubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/Choose_weight"
+        app:layout_constraintStart_toStartOf="@+id/textView31"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+    <EditText
+        android:id="@+id/cattleweightEdt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="weight "
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView33"
+        app:layout_constraintEnd_toEndOf="@+id/textView32"
+        app:layout_constraintStart_toEndOf="@+id/textView33"
+        app:layout_constraintTop_toTopOf="@+id/textView33"
+        android:autofillHints="@string/fab_transformation_scrim_behavior" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pregConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="gone"
+        android:paddingBottom="10dp"
+        android:background="@drawable/square"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cattleweightEdt">
+
+        <Switch
+            android:id="@+id/cattlePregnanatEdt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:padding="6dp"
+            android:showText="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:switchMinWidth="70dp"
+            android:text="Is Pregnanat ?   "
+            android:textOff="N"
+            android:textOn="Y"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView35"
+            style="@style/TextViewSubTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:visibility="invisible"
+            android:text="@string/Choose_Lactation"
+            app:layout_constraintStart_toStartOf="@+id/cattlePregnanatEdt"
+            app:layout_constraintTop_toBottomOf="@+id/cattlePregnanatEdt" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout2"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="Choose Lactation"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/textView35"
+            app:layout_constraintEnd_toEndOf="@+id/cattlePregnanatEdt"
+            app:layout_constraintTop_toTopOf="@+id/textView35">
+
+            <AutoCompleteTextView
+                android:id="@+id/cattlelactationEdt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView36"
+            style="@style/TextViewSubTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:visibility="invisible"
+            android:text="@string/Choose_Milk"
+            app:layout_constraintStart_toStartOf="@+id/textView35"
+            app:layout_constraintTop_toBottomOf="@+id/textView35" />
+
+        <EditText
+            android:id="@+id/editTextNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:inputType="number"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/textView36"
+            app:layout_constraintEnd_toEndOf="@+id/cattlePregnanatEdt"
+            app:layout_constraintStart_toEndOf="@+id/textView36"
+            app:layout_constraintTop_toTopOf="@+id/textView36" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView30"
+        style="@style/TextViewSubTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:text="More Information : "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pregConstraint" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2Animal"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:elevation="10dp"
+        android:hint="Extra Details Such as Unique Features,Any Injuries"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView30">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+               android:textSize="14sp"
+            android:ems="10"
+            android:gravity="top|start"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLength="400"
+            android:maxLines="10"
+            android:minLines="5"
+            android:scrollHorizontally="false" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textViewDivider2"
+        style="@style/TextViewTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#51787171"
+        android:paddingStart="16dp"
+        android:text="Seller Details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2Animal" />
+
+    <EditText
+        android:id="@+id/fullName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="@string/SellerName"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textColor="@color/black"
+
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/textViewDivider2"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="33dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_baseline_perm_identity_24"
+        android:backgroundTint="@color/black"
+        android:outlineSpotShadowColor="#70706E"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDivider2" />
+
+    <EditText
+        android:id="@+id/mobileNo"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="@string/SellerMobile"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/fullName"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/fullName" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="33dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/ic_baseline_call_24"
+        android:outlineSpotShadowColor="#70706E"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mobileNo"
+        android:backgroundTint="@color/black"/>
+
+    <EditText
+        android:id="@+id/sellerPriceEdt"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:hint="@string/SellerPrice"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/fullName"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/mobileNo" />
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="33dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/ic_baseline_money_24"
+        android:backgroundTint="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sellerPriceEdt" />
+
+    <EditText
+        android:id="@+id/sellerPlaceEdt"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:hint="@string/SellerPlace"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="textPostalAddress"
+
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/fullName"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/sellerPriceEdt" />
+
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="33dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/ic_loaction"
+        android:backgroundTint="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sellerPlaceEdt" />
+
+    <TextView
+        android:id="@+id/textView37"
+        style="@style/TextViewTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#51787171"
+        android:paddingStart="16dp"
+        android:text="@string/UploadAnimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sellerPlaceEdt" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextViewSubTitle"
+        app:layout_constraintTop_toBottomOf="@+id/textView37"
+        app:layout_constraintStart_toStartOf="@+id/textView37"
+        android:text="(At least Side Image)"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/red"/>
+
+    <RelativeLayout
+        android:id="@+id/frontImageRelative"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/square"
+        app:layout_constraintEnd_toEndOf="@id/textView37"
+        app:layout_constraintStart_toStartOf="@+id/textView37"
+        app:layout_constraintTop_toBottomOf="@+id/textView37">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/cow_front"
+            android:visibility="visible"
+            android:alpha="0.5"/>
+        <ImageView
+            android:id="@+id/cattleFrontImageEdt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/cow_gir"
+            android:visibility="gone"
+            />
+        <TextView
+            android:id="@+id/uploadFront"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Upload Front Image"
+            android:textColor="@color/white"
+            android:background="@drawable/button_transparent"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/sideImageRelative"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/square"
+        app:layout_constraintTop_toBottomOf="@id/frontImageRelative"
+        app:layout_constraintEnd_toEndOf="@id/textView37"
+        app:layout_constraintStart_toStartOf="@+id/textView37">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/cow"
+            android:visibility="visible"
+            android:alpha="0.5"/>
+        <ImageView
+            android:id="@+id/cattleSideImageEdt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/cow_gir"
+            android:visibility="gone"
+            />
+        <TextView
+            android:id="@+id/uploadSide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Upload Side Image"
+            android:textColor="@color/white"
+            android:background="@drawable/button_transparent"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/backImageRelative"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/square"
+        app:layout_constraintEnd_toEndOf="@id/textView37"
+        app:layout_constraintStart_toStartOf="@+id/textView37"
+        app:layout_constraintTop_toBottomOf="@id/sideImageRelative">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/cow_back"
+            android:visibility="visible"
+            android:alpha="0.5"/>
+        <ImageView
+            android:id="@+id/cattleBackImageEdt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/cow_gir"
+            android:visibility="gone"
+            />
+        <TextView
+            android:id="@+id/uploadBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Upload Back Image"
+            android:textColor="@color/white"
+            android:background="@drawable/button_transparent"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/angledImageRelative"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/square"
+        app:layout_constraintTop_toBottomOf="@id/backImageRelative"
+        app:layout_constraintEnd_toEndOf="@id/textView37"
+        app:layout_constraintStart_toStartOf="@+id/textView37">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/cow_angled"
+            android:visibility="visible"
+            android:alpha="0.5"/>
+        <ImageView
+            android:id="@+id/cattleAngledImageEdt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/cow_gir"
+            android:visibility="gone"
+            />
+        <TextView
+            android:id="@+id/uploadAngled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Upload Angled Image"
+            android:textColor="@color/white"
+            android:background="@drawable/button_transparent"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_bg"
+        android:text="Submit"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/angledImageRelative" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

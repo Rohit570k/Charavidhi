@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="cattleGender">
+        <item>Female</item>
+        <item>Male</item>
+    </string-array>
+
+    <string-array name="cattleAge">
+        <item>Less than 1</item>
+        <item>1 year</item>
+        <item>2 year</item>
+        <item>3 year</item>
+        <item>4 year</item>
+        <item>5 year</item>
+        <item>6 year</item>
+        <item>7 year</item>
+        <item>8 year</item>
+    </string-array>
+
+    <string-array name="cattleLactation">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+</resources>

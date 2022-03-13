@@ -43,13 +43,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:mbn_backgroundBottomColor="#3c415e"
+        app:mbn_backgroundBottomColor="@color/prim"
         app:mbn_circleColor="@color/white"
         app:mbn_countBackgroundColor="#ff6f00"
         app:mbn_countTextColor="#ffffff"
         app:mbn_rippleColor="#2f424242"
         app:mbn_defaultIconColor="@color/white"
-        app:mbn_selectedIconColor="#3c415e"
+        app:mbn_selectedIconColor="@color/prim"
         app:mbn_shadowColor="#1f212121"
         android:elevation="10dp"/>
 
